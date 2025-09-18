@@ -96,19 +96,7 @@ python symmetrize.py forward.a reverse.a > final_alignments.a
 
 ## Command-Line Options
 
-### model1.py Options
-- `-d, --data`: Data file prefix (default: `data/hansards`)
-- `-f, --french`: Foreign language file suffix (default: `f`)
-- `-e, --english`: English language file suffix (default: `e`)
-- `-n, --num_sentences`: Number of sentences to process (default: 1000)
-- `--iters`: Number of EM iterations (default: 5)
-- `--reverse`: Train reverse model P(e|f) instead of P(f|e)
-- `--lambda`: Diagonal bias strength (default: 0.0, no bias)
-- `--prune`: Pruning threshold for low probabilities (default: 0.0, no pruning)
-- `--show-top`: Print top translations for specified English word to stderr
-
-### symmetrize.py Options
-- `--method`: Symmetrization method (`grow-diag` or `intersect`, default: `grow-diag`)
+You can run **model1.py** or **symmetrize.py** with the **--help** flag to see a complete list of command line options.
 
 ### Further Reading
 Please refer to **Writeup.md** for an overview of our implementation, and **algorithm.pdf** for a mathematical description of our algorithm!
