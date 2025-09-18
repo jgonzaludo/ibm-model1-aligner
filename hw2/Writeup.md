@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This report presents the implementation and evaluation of IBM Model 1 for word alignment, along with two key extensions selected from the assignment options: (1) diagonal bias ("Implement a model that prefers to align words close to the diagonal") and (2) symmetrization ("Train a French-English model and an English-French model and combine their predictions"). We demonstrate significant improvements over the baseline Dice aligner, achieving an AER of 0.226 on 10,000 sentence pairs compared to the baseline AER of 0.681.
+This report presents the implementation and evaluation of IBM Model 1 for word alignment, along with two key extensions: (1) diagonal bias ("Implement a model that prefers to align words close to the diagonal") and (2) symmetrization ("Train a French-English model and an English-French model and combine their predictions"). We demonstrate significant improvements over the baseline Dice aligner, achieving an AER of 0.226 on 10,000 sentence pairs compared to the baseline AER of 0.681.
 
 ## 1. Baseline: Dice Aligner
 
@@ -118,11 +118,10 @@ The final system achieves an AER of 0.226 on 10,000 sentence pairs, representing
 
 ## Technical Implementation
 
-- **Language**: Python 3
 - **Data**: 10,000 French-English sentence pairs from Hansards corpus
 - **Configuration**: 10 EM iterations, λ=2.0 diagonal bias, grow-diag symmetrization
-- **Output**: Alignment file compatible with Gradescope submission format
+- **Output**: Alignment file
 
----
+## Algorithm
 
-The alignment file `alignment` has been successfully created and is ready for Gradescope submission. The file contains 10,000 lines of alignments in the required format (space-separated "i-j" pairs), achieving the target metrics of Precision=0.821, Recall=0.713, and AER=0.226.
+- Refer to **algorithm.pdf** for a mathematical description of our algorithm.
